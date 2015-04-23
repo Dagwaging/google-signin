@@ -3,7 +3,7 @@
 <link rel="import" href="../core-icons/core-icons.html">
 <link rel="import" href="../core-signals/core-signals.html">
 <link rel="import" href="../font-roboto/roboto.html">
-<link rel="import" href="../google-apis/google-js-api.html">
+<link rel="import" href="../google-apis/google-client-api.html">
 <link rel="import" href="../paper-button/paper-button-base.html">
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-shadow/paper-shadow.html">
@@ -77,7 +77,7 @@ any apps you're building. See the Google Developers Console
 
 <polymer-element name="google-signin" extends="paper-button-base" role="button">
   <template>
-    <google-js-api on-js-api-load="{{loadAuth}}"></google-js-api>
+    <google-client-api on-api-load="{{loadAuth}}"></google-client-api>
     <link rel="stylesheet" href="google-signin.css" >
 
     <core-signals on-core-signal-google-auth-request="{{authRequestScopes}}"></core-signals>
